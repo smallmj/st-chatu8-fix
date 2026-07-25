@@ -28179,6 +28179,8 @@ function showUserDemandPopup() {
       bubble.classList.add("mobile");
       bubble.style.top = `${topBound}px`;
       bubble.style.maxHeight = `${availableHeight}px`;
+    } else {
+      bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
     }
     const title = document.createElement("div");
     title.textContent = "\u{1F3A8} \u8F93\u5165\u751F\u6210\u9700\u6C42";
@@ -29205,6 +29207,8 @@ function showUserDemandPopup2() {
       bubble.classList.add("mobile");
       bubble.style.top = `${topOffset}px`;
       bubble.style.maxHeight = maxHeight;
+    } else {
+      bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
     }
     const title = document.createElement("div");
     title.textContent = "\u{1F5BC}\uFE0F \u8F93\u5165\u751F\u56FE\u9700\u6C42";
@@ -29752,6 +29756,8 @@ function showTagModifyDemandPopup() {
       bubble.classList.add("mobile");
       bubble.style.top = `${topBound}px`;
       bubble.style.maxHeight = `${availableHeight}px`;
+    } else {
+      bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
     }
     const title = document.createElement("div");
     title.textContent = "\u{1F3F7}\uFE0F \u4FEE\u6539 Tag";
@@ -31827,6 +31833,8 @@ function showImageSizePopup(button, inputEl, onConfirm) {
       bubble.classList.add("mobile");
       bubble.style.top = `${topBound}px`;
       bubble.style.maxHeight = `${availableHeight}px`;
+    } else {
+      bubble.style.maxHeight = Math.max(200, Math.floor(window.top.innerHeight * 0.85)) + "px";
     }
     const title = doc.createElement("div");
     title.textContent = `\u{1F4D0} \u56FE\u7247\u5927\u5C0F\u8BBE\u7F6E (${modeName})`;
@@ -38937,6 +38945,8 @@ function showTypeSelectionPopup() {
       bubble.classList.add("mobile");
       bubble.style.top = `${topOffset}px`;
       bubble.style.maxHeight = maxHeight;
+    } else {
+      bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
     }
     const title = document.createElement("div");
     title.className = "st-chatu8-popup-title";
@@ -39002,6 +39012,8 @@ function showPersonaGenDemandPopup(messagePreview, generationType = "character")
       bubble.classList.add("mobile");
       bubble.style.top = `${topOffset}px`;
       bubble.style.maxHeight = maxHeight;
+    } else {
+      bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
     }
     const title = document.createElement("div");
     title.className = "st-chatu8-popup-title";
