@@ -28153,7 +28153,7 @@ var init_newline_fix = __esm({
 
 function showUserDemandPopup() {
   return new Promise((resolve) => {
-    const isMobile3 = isMobileDevice();
+    const isMobile3 = isMobileDeviceDialog();
     const uploadedImages = [];
     let topBound = 10;
     let bottomBound = window.innerHeight - 10;
@@ -29183,7 +29183,7 @@ function buildImageParseFailureToastInfo(text) {
 }
 function showUserDemandPopup2() {
   return new Promise((resolve) => {
-    const isMobile3 = isMobileDevice();
+    const isMobile3 = isMobileDeviceDialog();
     const uploadedImages = [];
     let topOffset = 10;
     let maxHeight = "none";
@@ -29726,7 +29726,7 @@ function readFileAsBase643(file) {
 }
 function showTagModifyDemandPopup() {
   return new Promise((resolve) => {
-    const isMobile3 = isMobileDevice();
+    const isMobile3 = isMobileDeviceDialog();
     const uploadedImages = [];
     let topBound = 10;
     let bottomBound = window.innerHeight - 10;
@@ -29734,15 +29734,15 @@ function showTagModifyDemandPopup() {
       const topSettingsHolder = document.querySelector("#top-settings-holder");
       if (topSettingsHolder) {
         const rect = topSettingsHolder.getBoundingClientRect();
-        topBound = rect.bottom + 10;
+        topBound = Math.max(10, Math.min(rect.bottom + 10, window.innerHeight * 0.5));
       }
       const sendForm = document.querySelector("#send_form");
       if (sendForm) {
         const rect = sendForm.getBoundingClientRect();
-        bottomBound = rect.top - 10;
+        bottomBound = Math.max(topBound + 200, Math.min(rect.top - 10, window.innerHeight - 10));
       }
     }
-    const availableHeight = bottomBound - topBound;
+    const availableHeight = Math.max(200, bottomBound - topBound);
     const overlay2 = document.createElement("div");
     overlay2.id = "tag-modify-overlay";
     overlay2.className = "st-chatu8-popup-overlay";
@@ -31766,7 +31766,7 @@ function getImageSizeConfigKeys(mode) {
 function showImageSizePopup(button, inputEl, onConfirm) {
   return new Promise((resolve) => {
     const doc = window.top.document;
-    const isMobile3 = isMobileDevice();
+    const isMobile3 = isMobileDeviceDialog();
     const settings3 = extension_settings38[extensionName];
     const mode = settings3.mode || "comfyui";
     const { widthKey, heightKey, modeName } = getImageSizeConfigKeys(mode);
@@ -38916,7 +38916,7 @@ function updateManagementImagePreview(container) {
 }
 function showTypeSelectionPopup() {
   return new Promise((resolve) => {
-    const isMobile3 = isMobileDevice();
+    const isMobile3 = isMobileDeviceDialog();
     let topOffset = 10;
     let maxHeight = "none";
     if (isMobile3) {
@@ -38982,7 +38982,7 @@ function showTypeSelectionPopup() {
 function showPersonaGenDemandPopup(messagePreview, generationType = "character") {
   return new Promise((resolve) => {
     const uploadedImages = [];
-    const isMobile3 = isMobileDevice();
+    const isMobile3 = isMobileDeviceDialog();
     let topOffset = 10;
     let maxHeight = "none";
     if (isMobile3) {
