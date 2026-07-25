@@ -28181,6 +28181,21 @@ function showUserDemandPopup() {
       bubble.style.maxHeight = `${availableHeight}px`;
     } else {
       bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
+      requestAnimationFrame(() => {
+        try {
+          const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+          const r = bubble.getBoundingClientRect();
+          if (r.top < 8 || r.bottom > vv + 8) {
+            bubble.style.position = "fixed";
+            bubble.style.top = "8px";
+            bubble.style.left = "50%";
+            bubble.style.transform = "translateX(-50%)";
+            bubble.style.margin = "0";
+            bubble.style.maxHeight = Math.max(200, vv - 24) + "px";
+            bubble.style.overflowY = "auto";
+          }
+        } catch (e) {}
+      });
     }
     const title = document.createElement("div");
     title.textContent = "\u{1F3A8} \u8F93\u5165\u751F\u6210\u9700\u6C42";
@@ -29209,6 +29224,21 @@ function showUserDemandPopup2() {
       bubble.style.maxHeight = maxHeight;
     } else {
       bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
+      requestAnimationFrame(() => {
+        try {
+          const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+          const r = bubble.getBoundingClientRect();
+          if (r.top < 8 || r.bottom > vv + 8) {
+            bubble.style.position = "fixed";
+            bubble.style.top = "8px";
+            bubble.style.left = "50%";
+            bubble.style.transform = "translateX(-50%)";
+            bubble.style.margin = "0";
+            bubble.style.maxHeight = Math.max(200, vv - 24) + "px";
+            bubble.style.overflowY = "auto";
+          }
+        } catch (e) {}
+      });
     }
     const title = document.createElement("div");
     title.textContent = "\u{1F5BC}\uFE0F \u8F93\u5165\u751F\u56FE\u9700\u6C42";
@@ -29758,6 +29788,21 @@ function showTagModifyDemandPopup() {
       bubble.style.maxHeight = `${availableHeight}px`;
     } else {
       bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
+      requestAnimationFrame(() => {
+        try {
+          const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+          const r = bubble.getBoundingClientRect();
+          if (r.top < 8 || r.bottom > vv + 8) {
+            bubble.style.position = "fixed";
+            bubble.style.top = "8px";
+            bubble.style.left = "50%";
+            bubble.style.transform = "translateX(-50%)";
+            bubble.style.margin = "0";
+            bubble.style.maxHeight = Math.max(200, vv - 24) + "px";
+            bubble.style.overflowY = "auto";
+          }
+        } catch (e) {}
+      });
     }
     const title = document.createElement("div");
     title.textContent = "\u{1F3F7}\uFE0F \u4FEE\u6539 Tag";
@@ -31835,6 +31880,21 @@ function showImageSizePopup(button, inputEl, onConfirm) {
       bubble.style.maxHeight = `${availableHeight}px`;
     } else {
       bubble.style.maxHeight = Math.max(200, Math.floor(window.top.innerHeight * 0.85)) + "px";
+      requestAnimationFrame(() => {
+        try {
+          const vv = (window.top.visualViewport && window.top.visualViewport.height) || window.top.innerHeight;
+          const r = bubble.getBoundingClientRect();
+          if (r.top < 8 || r.bottom > vv + 8) {
+            bubble.style.position = "fixed";
+            bubble.style.top = "8px";
+            bubble.style.left = "50%";
+            bubble.style.transform = "translateX(-50%)";
+            bubble.style.margin = "0";
+            bubble.style.maxHeight = Math.max(200, vv - 24) + "px";
+            bubble.style.overflowY = "auto";
+          }
+        } catch (e) {}
+      });
     }
     const title = doc.createElement("div");
     title.textContent = `\u{1F4D0} \u56FE\u7247\u5927\u5C0F\u8BBE\u7F6E (${modeName})`;
@@ -38947,6 +39007,21 @@ function showTypeSelectionPopup() {
       bubble.style.maxHeight = maxHeight;
     } else {
       bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
+      requestAnimationFrame(() => {
+        try {
+          const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+          const r = bubble.getBoundingClientRect();
+          if (r.top < 8 || r.bottom > vv + 8) {
+            bubble.style.position = "fixed";
+            bubble.style.top = "8px";
+            bubble.style.left = "50%";
+            bubble.style.transform = "translateX(-50%)";
+            bubble.style.margin = "0";
+            bubble.style.maxHeight = Math.max(200, vv - 24) + "px";
+            bubble.style.overflowY = "auto";
+          }
+        } catch (e) {}
+      });
     }
     const title = document.createElement("div");
     title.className = "st-chatu8-popup-title";
@@ -39014,6 +39089,21 @@ function showPersonaGenDemandPopup(messagePreview, generationType = "character")
       bubble.style.maxHeight = maxHeight;
     } else {
       bubble.style.maxHeight = Math.max(200, Math.floor(window.innerHeight * 0.85)) + "px";
+      requestAnimationFrame(() => {
+        try {
+          const vv = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+          const r = bubble.getBoundingClientRect();
+          if (r.top < 8 || r.bottom > vv + 8) {
+            bubble.style.position = "fixed";
+            bubble.style.top = "8px";
+            bubble.style.left = "50%";
+            bubble.style.transform = "translateX(-50%)";
+            bubble.style.margin = "0";
+            bubble.style.maxHeight = Math.max(200, vv - 24) + "px";
+            bubble.style.overflowY = "auto";
+          }
+        } catch (e) {}
+      });
     }
     const title = document.createElement("div");
     title.className = "st-chatu8-popup-title";
